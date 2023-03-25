@@ -1,0 +1,47 @@
+1. Signup
+
+Endpoint: POST/api/signup
+Request body:
+{
+    "name": "Vagisha Gupta",
+    "email": "vagisha.gupta@rediffmail.com",
+    "password": "xyz123567"
+}
+Reponse body:
+{
+    "token": ""
+}
+HTTP status codes:
+200 OK- user created successfully
+400 Bad request - Invalid input
+409 Conflict - User already exists.
+
+
+2. Login
+
+Endpoint: POST/api/Login
+Request body:
+{
+    "email": "vagisha.gupta@rediffmail.com",
+    "password":"xyz12345"
+}
+Reponse Body:
+{
+    "token":""
+}
+HTTP status codes:
+200 OK- Login successfully
+400 Bad request - Invalid input
+401 Unauthorized - Invalid Credentials.
+
+
+
+3. Auth Check
+
+Endpoint: GET/api/authcheck
+Request Headers:
+Authorization: Bearer <JWT>
+Response body:
+{
+    "valid": true
+}
